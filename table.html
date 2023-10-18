@@ -2,27 +2,40 @@
 <html>
     <head>
         <title>
-            Популярные места
+            Все достопримечательности
         </title>
     </head>
-    <body bgcolor="#AFDAFC" text="#003153">
-        <h1 align="center">Самые популярные достопримечательности Владивостока</h1>
+    <body bgcolor="#AFDAFC" text="#003153" leftmargin="10%" rightmargin="10%">
+        <h1 align="center">Все достопримечательности Владивостока</h1>
         <nav align="center">
             <a href="main.html">Главная</a> |
-              <a href="table.html">Популярные места</a> |
+              <a href="table.html">Все достопримечательности</a> |
               <a href="history.html">История Владивостока</a> |
               <a href="SignIn.html">Войти</a> |
               <a href="SingUp.html">Зарегистрироваться</a> 
           </nav>
+        <p></p>
         <label> Сортировка 
         <select name="sort">
-            <option value="0"> по возрастанию популярности </option>
-            <option value="1" selected> по убыванию популярности </option>
+            <option value="0" selected> по возрастанию популярности </option>
+            <option value="1"> по убыванию популярности </option>
             <option value="2"> по алфавиту </option>
            </select>
         </label>
+        <label> Фильтр 
+            <select name="sort">
+                <option value="0" selected> все достопримечательности </option>
+                <option value="1"> только во Владивостоке </option>
+                <option value="2"> только на острове Руссклм </option>
+               </select>
+            </label>
            
-<p align="center">В таблице представленны данные о количеству интернет-запросов в поисковой системе Яндекс по каждой достопримечательности.</p>
+<p align="center">
+    <details>
+        <summary> Таблица </summary>
+        В таблице представленны данные по количеству интернет-запросов в поисковой системе Яндекс по каждой достопримечательности.
+      </details>
+    </p>
         <table align="center" border="2" bordercolor="#003153" cellspacing="0" cellpadding="10">
             <tr><th>Достопримечательность</th><th>Среднее число запросов<br> в Яндексе за месяц</th></tr>
 
