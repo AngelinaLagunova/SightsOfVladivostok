@@ -15,54 +15,118 @@
               <a href="SingUp.html">Зарегистрироваться</a> 
           </nav>
         <p></p>
-        <label> Сортировка 
-        <select name="sort">
-            <option value="0" selected> по возрастанию популярности </option>
-            <option value="1"> по убыванию популярности </option>
-            <option value="2"> по алфавиту </option>
-           </select>
-        </label>
-        <label> Фильтр 
-            <select name="sort">
-                <option value="0" selected> все достопримечательности </option>
-                <option value="1"> только во Владивостоке </option>
-                <option value="2"> только на острове Русский </option>
-               </select>
-            </label>
-           
+            <p>
+            <details>
+                <summary> График </summary>
+                <form>
+                <table>
+                    <tr><td>Значения по оси OX</td><td>Результат</td></tr>
+                    <tr><td><input type="radio" name="name" value="0"> Тип</td><td><input type="checkbox" name="result" value="0">Максимальное число запросов</td></tr>
+                    <tr><td><input type="radio" name="name" value="1"> Месторасположение</td><td><input type="checkbox" name="result" value="1">Минимальное число запросов</td></tr>
+                    <tr><td><input type="radio" name="name" value="2"> Год</td><td><input type="checkbox" name="result" value="2">Количество достопримечательностей</td></tr>
+                    <tr><td colspan="2"> <input type="submit" value="Построить"></td></tr>
+                </table>
+            </form>
+            </details>
+            <details>
+                <summary> Фильтр </summary>
+                <form>
+                    <label> Название
+                        <input type="text" name="sight"><br>
+                    </label>
+                    <label> Тип
+                        <input type="text" name="type"><br>
+                    </label>
+                    <label> Месторасположение
+                        <input type="text" name="place"><br>
+                    </label>
+                    <label> Число запросов: от
+                        <input type="text" name="request1">
+                    </label>
+                    <label> до
+                        <input type="text" name="request2"><br>
+                    </label>
+                    <label> Год основания: от
+                        <input type="text" name="year1">
+                    </label>
+                    <label> до
+                        <input type="text" name="year2"><br>
+                    </label>
+                    <input type="submit" value="Найти">
+                </form>
+            </details>
+            <details>
+                <summary> Сортировка </summary>
+                <form>
+                    Первый уровень: 
+                    <select name="Table">
+                        <option value="0" selected> Нет </option>
+                        <option value="1"> Местоположение </option>
+                        <option value="2"> Тип </option>
+                        <option value="3"> Год </option>
+                        <option value="4"> Достопримечательность </option>
+
+
+                       </select>
+                       по убыванию? <input type="checkbox" name="sort" value="0"><br>
+                       Второй уровень: 
+                    <select name="Table">
+                        <option value="0" selected> Нет </option>
+                        <option value="1"> Местоположение </option>
+                        <option value="2"> Тип </option>
+                        <option value="3"> Год </option>
+                        <option value="4"> Достопримечательность </option>
+
+
+                       </select>
+                       по убыванию? <input type="checkbox" name="sort" value="0"><br>
+                       Третий уровень: 
+                    <select name="Table">
+                        <option value="0" selected> Нет </option>
+                        <option value="1"> Местоположение </option>
+                        <option value="2"> Тип </option>
+                        <option value="3"> Год </option>
+                        <option value="4"> Достопримечательность </option>
+
+
+                       </select>
+                       по убыванию? <input type="checkbox" name="sort" value="0"><br>
+                <input type="submit" value="Сортировать">
+            </form>
+            </details>
+        </p>
 <p align="center">
-    <details>
-        <summary> Таблица </summary>
-        В таблице представленны данные по количеству интернет-запросов в поисковой системе Яндекс по каждой достопримечательности.
-      </details>
+    
+        <!-- В таблице представленны данные по количеству интернет-запросов в поисковой системе Яндекс по каждой достопримечательности.
+       -->
     </p>
         <table align="center" border="2" bordercolor="#003153" cellspacing="0" cellpadding="10">
-            <tr><th>Достопримечательность</th><th>Среднее число запросов<br> в Яндексе за месяц</th></tr>
+            <tr><th>Месторасположение</th><th>Тип</th><th>Достопримечательность</th><th>Среднее число запросов<br> в Яндексе за месяц</th><th>Год основания</th></tr>
 
-            <tr><td>Золотой мост</td><td>24 563</td></tr>
-            <tr><td>Русский мост</td><td>32 009</td></tr>
-            <tr><td>Остров Русский</td><td>107 078</td></tr>
-            <tr><td>сопка Бурачка</td><td>798</td></tr>
-            <tr><td>Набережная Цесаревича</td><td>1 060</td></tr>
-            <tr><td>Токаревский маяк</td><td>3 624</td></tr>
-            <tr><td>Парк Минного Городка</td><td>347</td></tr>
-            <tr><td>Мыс Тобизина</td><td>4 503</td></tr>
-            <tr><td>Ворошиловская батарея</td><td>1 626</td></tr>
-            <tr><td>Покровский парк</td><td>15 908</td></tr>
+            <tr><td>Залив Золотой рог</td><td>Мосты</td><td>Золотой мост</td><td>24 563</td><td>2012</td></tr>
+            <tr><td>Пролив Босфора</td><td>Мосты</td><td>Русский мост</td><td>32 009</td><td>2012</td></tr>
+            <tr><td>Остров Русский</td><td>Острова</td><td>Остров Русский</td><td>107 078</td><td>1859</td></tr>
+            <tr><td>Чуркин</td><td>Сооружения</td><td>сопка Бурачка</td><td>798</td><td>1863</td></tr>
+            <tr><td>Центр</td><td>Набережные</td><td>Набережная Цесаревича</td><td>1 060</td><td>2012</td></tr>
+            <tr><td>Эгершельд</td><td>Маяки</td><td>Токаревский маяк</td><td>3 624</td><td></td></tr>
+            <tr><td>Баляева</td><td>Парки</td><td>Парк Минного Городка</td><td>347</td><td></td></tr>
+            <tr><td>Остров Русский</td><td>Пляжи</td><td>Мыс Тобизина</td><td>4 503</td><td></td></tr>
+            <tr><td>Остров Русский</td><td>Памятники</td><td>Ворошиловская батарея</td><td>1 626</td><td></td></tr>
+            <tr><td>Центр</td><td>Парки</td><td>Покровский парк</td><td>15 908</td><td></td></tr>
 
-            <tr><td>Площадь Борцов революции</td><td>958 </td></tr>
-            <tr><td>Серая Лошадь</td><td>410</td></tr>
-            <tr><td>Набережная Спортивной гавани</td><td>1 171</td></tr>
-            <tr><td>Фуникулёр</td><td>2 987</td></tr>
-            <tr><td>Подводная лодка С-56</td><td>631</td></tr>
-            <tr><td>Приморский Океанариум</td><td>4 050</td></tr>
-            <tr><td>Улица Адмирала Фокина</td><td>1 992</td></tr>
-            <tr><td>Новосильцевская батарея</td><td>349</td></tr>
-            <tr><td>Памятный знак основателям Владивостока</td><td>11</td></tr>
-            <tr><td>Памятник Высоцкому</td><td>100</td></tr>
+            <tr><td></td><td></td><td>Площадь Борцов революции</td><td>958 </td><td></td></tr>
+            <tr><td></td><td></td><td>Серая Лошадь</td><td>410</td><td></td></tr>
+            <tr><td></td><td></td><td>Набережная Спортивной гавани</td><td>1 171</td><td></td></tr>
+            <tr><td></td><td></td><td>Фуникулёр</td><td>2 987</td><td></td></tr>
+            <tr><td></td><td></td><td>Подводная лодка С-56</td><td>631</td><td></td></tr>
+            <tr><td></td><td></td><td>Приморский Океанариум</td><td>4 050</td><td></td></tr>
+            <tr><td></td><td></td><td>Улица Адмирала Фокина</td><td>1 992</td><td></td></tr>
+            <tr><td></td><td></td><td>Новосильцевская батарея</td><td>349</td><td></td></tr>
+            <tr><td></td><td></td><td>Памятный знак основателям Владивостока</td><td>11</td><td></td></tr>
+            <tr><td></td><td></td><td>Памятник Высоцкому</td><td>100</td><td></td></tr>
 
-            <tr><td>Бухта Стеклянная</td><td>3 721</td></tr>
-            <tr><td>Мыс Вятлина</td><td>503</td></tr>
+            <tr><td></td><td></td><td>Бухта Стеклянная</td><td>3 721</td><td></td></tr>
+            <tr><td></td><td></td><td>Мыс Вятлина</td><td>503</td><td></td></tr>
             <tr><td></td><td></td></tr>
             <tr><td></td><td></td></tr>
             <tr><td></td><td></td></tr>
