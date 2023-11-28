@@ -28,7 +28,7 @@
     }
 
     .content {
-      width: 90%;
+      width: 96vw;
       margin: auto;
       text-align: center;
     }
@@ -38,21 +38,28 @@
       width: 60%;
     }
 
-    .content>.block {
+    .content > .lineblockbig
+    {
       display: block;
+      width:100%;
+    }
+
+    .lineblockbig > .block {
+      display: inline-block;
       border: solid medium rgb(23, 79, 124);
-      width: 30%;
-      float: left;
-      height: 340px;
-      margin: 10px;
+      width: 28%;
+      min-height: 330px;
+      height:10vh;
+      margin: 5px;
+      vertical-align: middle;
 
     }
 
     .block>.lineblock {
       text-align: justify;
-      height: 50%;
       margin: 5px;
       padding: 5px;
+
     }
 
     .min img {
@@ -61,14 +68,36 @@
 
     }
 
-    .lineblock .min {
+    .lineblock > .min {
       display: inline-block;
       text-align: center;
       width: 49%;
-      height: 150px;
       line-height: 150px;
-
     }
+
+    @media (max-width:1300px)
+    {
+      .lineblockbig>.block
+      {
+        height:50vh;
+      }
+    }
+    @media (max-width:1100px)
+    {
+      .lineblockbig>.block
+      {
+        height:85vh;
+      }
+    }
+    @media (max-width:900px)
+    {
+      .lineblockbig>.block
+      {
+        height:130vh;
+      }
+    }
+
+
   </style>
 
   <title>
@@ -105,6 +134,7 @@
   </div>
 
   <div class="content">
+    <div class="lineblockbig">
 
     <div class="block">
 
@@ -166,6 +196,9 @@
 
     </div>
 
+  </div>
+  <div class="lineblockbig">
+
 
     <div class="block">
 
@@ -225,6 +258,7 @@
         Высота сопки составляет 138 метров. с вершины открывается вид на Золотой Рог, Диомид, центр города и Первомайский район. Своё официальное имя сопка получила в честь Евгения Степановича Бурачка, первого командира военного порта Владивосток, незаурядного человека, много сделавшего для города.
       </div>
 
+    </div>
     </div>
 
   </div>
