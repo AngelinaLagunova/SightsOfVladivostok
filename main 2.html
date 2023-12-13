@@ -15,7 +15,7 @@
     {
       display: grid;
       grid-template-rows: 1fr;
-      grid-template-columns: repeat(5,1fr); 
+      grid-template-columns: repeat(4,1fr); 
       
     }
 
@@ -25,6 +25,10 @@
       color: rgb(98, 167, 236);
 
     }
+
+    a:active {
+    color: #ffff00;
+   }
 
     h1 {
       text-align: center;
@@ -37,6 +41,25 @@
       width: 96vw;
       margin: auto;
       justify-content: center;
+
+    }
+
+    .info
+    {
+      padding:10px;
+      width:46vw;
+      display: inline-grid;
+    }
+
+    .container2
+    {
+      display: grid;
+      grid-template-columns: 1fr 1fr; 
+      width:100vw;
+      margin: auto;
+      border-width: 2px;
+      border-color: rgb(23, 79, 124) #AFDAFC #AFDAFC;
+      border-style: solid;
     }
 
 
@@ -87,12 +110,25 @@
     .main {
       background-image: none;
     }
+    h1{
+      display:none;
+    }
     .menu
     {
-      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
       grid-template-columns: 1fr 1fr; 
+      font-size:0.7em;
+      padding:5px;
 
     }
+
+    a
+    {
+      background-color: rgb(23, 79, 124);
+      height:50px;
+      margin:5px;
+    }
+
     }
 
   </style>
@@ -111,13 +147,12 @@
 
   <div class="menu">
     
-    <a href="main.html">Главная</a>
+    <a href="main 2.html">Главная</a>
       <a href="table.html">Все достопримечательности</a>
       <a href="history.html">История Владивостока</a>
-      <a href="SignIn.html">Войти</a>
       <a href="SingUp.html">Зарегистрироваться</a>
 
-    </div>
+  </div>
 
 
   </div>
@@ -234,7 +269,21 @@
       </div>
       </div>
 
+      
+
   </div>
+  </div>
+
+  <div class="container2">
+  <div class="info">
+    © Лагунова А.М., Б9121-09.03.04, 2023-2024
+  </div>
+  <div class="info" align="right">
+    +7(914)337-92-93
+  </div>
+  </div>
+
+
 
 </body>
 
