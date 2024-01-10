@@ -1,0 +1,20 @@
+include mixin.pug 
+block variables
+    - var dictMenu = {'Главная': 'main.html', 'Все достопримечательности' : "table.html", 'История Владивостока': "history.html", 'Зарегистрироваться': "sign.html"}
+doctype html
+html(lang="ru")
+    head
+        title #{title}
+        link(rel="stylesheet", href="template.css")
+        link(rel="stylesheet", href=css)
+    body
+        block header
+            header
+                h1= head
+            nav
+                +createMenu(dictMenu, title)
+        block content
+        block footer
+            footer 
+                hr 
+                h4 &copy Лагунова А.М., Б9121-09.03.04, 2023-2024;

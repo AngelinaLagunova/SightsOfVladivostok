@@ -1,0 +1,25 @@
+article {
+  display: grid;
+  width: 96vw;
+  margin: 5px auto;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 800px) {
+  article {
+    grid-template-columns: 1fr;
+  }
+}
+article section {
+  align-items: center;
+  text-align: center;
+  border: #003153 solid medium;
+  margin: 5px;
+}
+article section img {
+  width: 60%;
+  margin: auto;
+}
+p {
+  margin: 30px auto;
+  text-align: center;
+}

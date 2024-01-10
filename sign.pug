@@ -1,0 +1,13 @@
+extends template.pug
+include mixin.pug 
+block variables
+    - var title = 'Зарегистрироваться'
+    - var head = 'Регистрация'
+    - var dictMenu = {'Главная': 'main.html', 'Все достопримечательности' : "table.html", 'История Владивостока': "history.html", 'Зарегистрироваться': "sign.html"}
+    - var css = 'table.css'
+    - var sign = [{'text':'Имя пользователя:','id':'username','placeholder':'Введите имя'},{'text':'Email:','id':'email','placeholder':'Введите email'},{'text':'Пароль:','id':'password','placeholder':'Введите пароль'}]
+block content
+    form
+        section
+            +createSign(sign)
+            input(type="submit" value="Зарегистрироваться")

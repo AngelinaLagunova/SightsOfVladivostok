@@ -1,0 +1,44 @@
+colorText = #003153
+colorBack = #AFDAFC
+
+body
+    color colorText
+    background colorBack
+    margin-bottom 5%
+
+header
+    text-align center
+
+nav
+    text-align center
+    @media (max-width: 800px)
+        display grid
+        grid-template-rows 1fr 1fr
+        grid-template-columns 1fr 1fr
+        background-color colorText
+
+    & a
+        display inline-block
+        padding 1%
+        color colorText
+        text-decoration: none
+        @media (max-width: 800px)
+            color colorBack
+
+        &:hover
+        &.active
+            background-color colorText
+            color colorBack
+
+footer
+    height: 5%;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+    & h4
+        padding 5px
+        color colorText
+
+    & hr 
+        border-top 2px solid colorText

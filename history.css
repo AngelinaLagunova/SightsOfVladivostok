@@ -1,0 +1,23 @@
+article {
+  display: grid;
+  width: 80vw;
+  margin: 1% auto;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 800px) {
+  article {
+    grid-template-columns: 1fr;
+  }
+}
+article .block {
+  align-items: center;
+  margin: 1%;
+}
+article .block img {
+  width: 60%;
+}
+@media (max-width: 800px) {
+  article .block img {
+    width: 100%;
+  }
+}

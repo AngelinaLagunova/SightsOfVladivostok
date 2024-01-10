@@ -1,0 +1,49 @@
+mixin createMenu(menu, active)
+    each value, key in menu
+        if active == key
+            a.active(href= value)= key
+        else
+            a(href= value)= key
+
+mixin createContent(item)
+    div.block=item.text
+    div.block 
+        img(src= "img/" + item.img)
+
+mixin createSection(item)
+    img(src= "img/" + item.image)
+    h3=item.header
+    p=item.text
+        a(href="#")
+
+mixin createGraphic(list)
+    - var i = 1
+    each item in list 
+        div.block
+            label=item
+                if (i%2!=0)
+                    input(type="radio" name="name" value="0")
+                else  
+                    input(type="checkbox" name="result" value="0")
+                - i++
+
+mixin createFilter(listFilter)
+    each value, key in listFilter
+        div.block #{key}
+        div.block 
+            input(type="text" name=value)
+
+mixin createSort(count,sort)
+    each item in count 
+        div.block #{item}
+            select(name="Table")
+                each value, key in sort
+                    option(value=key) #{value}
+        div.block по убыванию?
+            input(type="checkbox" name="sort" value="0")
+
+mixin createSign(sign)
+    each item in sign 
+        div.block #{item.text}
+        div.block
+            input(type="text" id=item.id placeholder=item.placeholder)

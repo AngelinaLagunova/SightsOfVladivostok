@@ -1,0 +1,32 @@
+colorText = #003153
+colorBack = #AFDAFC
+
+
+table 
+    margin 30px auto
+    border colorText solid medium
+
+details
+    margin 4vw
+
+section 
+    width 30vw
+    display grid 
+    grid-template-columns repeat(2, 1fr)
+    padding 20px
+    @media (max-width:800px)
+        width:60vw
+
+    & .block
+        display inline-grid 
+        margin 10px
+
+
+input[type=submit]
+    background-color colorText
+    border none
+    color colorBack
+    padding 16px 32px
+    text-decoration none
+    margin 4px 2px
+    cursor pointer

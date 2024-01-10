@@ -1,0 +1,18 @@
+colorText = #003153
+colorBack = #AFDAFC
+
+article 
+    display grid
+    width 80vw
+    margin 1% auto 
+    grid-template-columns repeat(2, 1fr)
+    @media (max-width:800px)
+        grid-template-columns 1fr
+
+    & .block
+        align-items center
+        margin: 1%;
+        & img 
+            width:60%
+            @media (max-width:800px)
+                width:100%

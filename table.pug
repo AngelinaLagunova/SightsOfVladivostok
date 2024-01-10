@@ -1,0 +1,51 @@
+extends template.pug
+include mixin.pug 
+block variables
+    - var title = 'Все достопримечательности'
+    - var head = 'Все достопримечательности Владивостока'
+    - var dictMenu = {'Главная': 'main.html', 'Все достопримечательности' : "table.html", 'История Владивостока': "history.html", 'Зарегистрироваться': "sign.html"}
+    - var css = 'table.css'
+    - var list = [{'place' : 'Залив Золотой рог', 'type' : 'Мосты', 'name' : 'Золотой мост', 'count': '24 563','year':'2012'}, {'place' : 'Пролив Босфора', 'type' : 'Мосты','name' : 'Русский мост', 'count': '32 009','year':'2012'}, {'place' : 'Остров Русский', 'type' : 'Острова','name' : 'Остров Русский', 'count': '107 078','year':'1859'}, {'place' : 'Чуркин', 'type' : 'Сооружения','name' : 'сопка Бурачка', 'count': '798','year':'1863'}, {'place' : 'Центр', 'type' : 'Набережные','name' : 'Набережная Цесаревича', 'count': '1 060','year':'2012'}]
+    - var listGraph = ['Тип','Максимальное число запросов','Месторасположение','Минимальное число запросов','Год','Количество достопримечательностей']
+    - var listFilter = {'Название': 'name', 'Тип':'type', 'Месторасположение':'place','Число запросов: от':'request1','до':'request2','Год основания: от':'year1','до':'year2'}
+    - var count = ['Первый уровень','Второй уровень','Третий уровень']
+    - var sort = {'0':'Нет','1':'Местоположение','2':'Тип','3':'Год','4':'Достопримечательность'}
+
+block content 
+
+    details 
+        summary График
+        form 
+            section 
+                div.block <b>Значения по оси OX</b>
+                div.block <b>Результат</b>
+                +createGraphic(listGraph)
+                input(type="submit" value="Построить")
+    details  
+        summary Фильтр
+        form
+            section 
+                +createFilter(listFilter)
+                input(type="submit" value="Найти")
+    details  
+        summary Сортировка
+        form
+            section 
+                +createSort(count,sort)
+                input(type="submit" value="Сортировать")
+
+    table(border = 2 cellspacing=0 cellpadding=10)
+        tr
+            th Месторасположение
+            th Тип
+            th Достопримечательность
+            th Среднее число запросов в Яндексе за месяц
+            th Год основания
+        each item in list
+            tr
+                td=item.place
+                td=item.type 
+                td=item.name 
+                td=item.count 
+                td=item.year
+    
